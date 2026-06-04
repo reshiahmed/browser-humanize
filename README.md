@@ -1,6 +1,6 @@
 # browser-humanize
 
-A [Claude Code](https://claude.com/claude-code) / Claude Agent skill that humanizes AI-written text by driving a **real online humanizer tool** in your own browser via [Kimi WebBridge](https://github.com/) — rather than rewriting the prose itself.
+A [Claude Code](https://claude.com/claude-code) / Claude Agent skill that humanizes AI-written text by driving a **real online humanizer tool** in your own browser via [Kimi WebBridge](https://www.kimi.com/features/webbridge) — rather than rewriting the prose itself.
 
 It pastes your text in chunks within each tool's word limit and collects the genuinely tool-produced output.
 
@@ -30,7 +30,9 @@ git clone https://github.com/reshiahmed/browser-humanize.git \
   ~/.claude/skills/browser-humanize
 ```
 
-The skill auto-loads on next session. Requires the Kimi WebBridge browser daemon.
+The skill auto-loads on next session. Requires the Kimi WebBridge browser daemon and the Chrome extension:
+
+- **Kimi WebBridge — Chrome Web Store:** https://chromewebstore.google.com/detail/kimi-webbridge/fldmhceldgbpfpkbgopacenieobmligc
 
 ## Structure
 
