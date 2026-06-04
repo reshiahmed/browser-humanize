@@ -6,6 +6,9 @@ It pastes your text in chunks within each tool's word limit and collects the gen
 
 ## Supported tools
 
+- Grubby AI
+- HumanizeAI Pro
+- HumanizeAI (free)
 - QuillBot AI Humanizer
 - Grammarly Humanizer
 - ZeroGPT
