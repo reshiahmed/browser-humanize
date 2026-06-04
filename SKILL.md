@@ -49,6 +49,24 @@ If it's not `running: true` + `extension_connected: true`, the `kimi-webbridge` 
 `references/operations.md` has the fix. The bridge is required — this skill is entirely
 browser automation.
 
+### 1.5. First-time setup — confirm the user is logged in
+
+Before processing **any** text, regardless of document size, verify the user has a
+working, logged-in account on the tool(s) you're about to use. The free tiers and
+subscriptions are tied to the logged-in session, so this has to be settled first.
+
+1. Open each tool you plan to use (best-first order) in the Kimi session and read the
+   page state: is there a signed-in avatar/account menu, or a "Log in / Sign up" wall?
+2. **If already logged in** → note it and continue the workflow.
+3. **If not logged in** → stop and walk the user through it:
+   - Tell them which tool needs a login and why (their tier/limit lives on the account).
+   - Point them at the recommended tools' login pages and let them sign in (or create an
+     account) in the same browser the bridge controls — their session is then reused.
+   - Wait for them to confirm they're signed in, re-check the page, then continue.
+
+Do this once, up front. After the user has each account set up, the rest of the run is
+just chunk → humanize → assemble, no matter how large the document is.
+
 ### 2. Load the tool recipe
 
 - **QuillBot** → read `references/quillbot.md` (the best-supported, fully-automatable tool).

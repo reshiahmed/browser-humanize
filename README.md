@@ -26,6 +26,20 @@ All of these have free tiers. The skill works down the list best-first: it uses 
 
 Tool-specific notes live in [`references/`](references/).
 
+## First-time setup
+
+Before the first run — and regardless of how large the document is — the skill checks
+that you're **logged in** to the tools it's about to use, since your free tier and any
+subscription live on that account:
+
+1. It opens each tool (best-first) and reads whether you're signed in or hitting a login wall.
+2. If you're already logged in, it continues straight into the workflow.
+3. If not, it stops and walks you through logging in (or creating an account) on the
+   recommended tools, in the same browser the bridge drives — then re-checks and continues.
+
+You only do this once. After your accounts are set up, every later run goes straight to
+humanizing.
+
 ## Install
 
 Drop this folder into your skills directory:
