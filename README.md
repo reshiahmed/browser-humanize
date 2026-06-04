@@ -15,6 +15,8 @@ It pastes your text in chunks within each tool's word limit and collects the gen
 - Undetectable.ai
 - Other generic humanizer sites
 
+All of these have free tiers. The skill works down the list best-first: it uses one tool until its limit is hit, then moves to the next, chaining through all of them. A subscription on any tool raises (or removes) that limit, so you stay on the better tool longer before falling through.
+
 ## How it works
 
 1. You supply the text and which tool to use.
