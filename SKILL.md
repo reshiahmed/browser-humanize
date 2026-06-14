@@ -27,10 +27,28 @@ the "humanized" text yourself — that defeats the entire purpose and misleads t
 user. If the tool blocks you (login wall, daily limit, captcha), stop and ask the
 user how to proceed; don't paper over it.
 
+## Tool priority
+
+When the user hasn't pinned a tool, work down this list **best-first** — use each until
+its limit is hit, then fall through to the next:
+
+1. **Grubby AI**
+2. **HumanizeAI Pro**
+3. **HumanizeAI (free)**
+4. **QuillBot AI Humanizer**
+5. **Grammarly Humanizer**
+6. **ZeroGPT**
+7. **Undetectable.ai**
+8. **Other generic humanizer sites**
+
+All have free tiers; a subscription on any tool raises or removes its limit, so you stay
+on the better tool longer before falling through. If the user names a tool, that overrides
+this order.
+
 ## Inputs to gather
 
 1. **The text** to humanize (from the user, a file, or earlier in the conversation).
-2. **The tool** — QuillBot, Grammarly, or another humanizer site.
+2. **The tool** — the user's choice, otherwise the best-first order above.
 3. **The word limit per run** — ask the user first; many know it (QuillBot free = 125).
    If they don't, discover it (see the reference files). Tell them the limit you'll use.
 
@@ -72,7 +90,9 @@ just chunk → humanize → assemble, no matter how large the document is.
 - **QuillBot** → read `references/quillbot.md` (the best-supported, fully-automatable tool).
 - **Grammarly** → read `references/grammarly.md` first — its editor can't be automated,
   so you'll likely steer the user to QuillBot or a manual paste loop.
-- **Anything else** → read `references/generic-tool.md` and discover its mechanics live.
+- **Grubby AI, HumanizeAI Pro/free, ZeroGPT, Undetectable.ai, or anything else** → read
+  `references/generic-tool.md` and discover that site's mechanics live. No dedicated recipe
+  yet, so probe the input editor, counter, and action button before processing real text.
 
 Each recipe explains the one detail that makes or breaks this: humanizer inputs are
 usually `contenteditable` editors that **ignore programmatically-inserted text** — their
@@ -135,5 +155,6 @@ might want to keep iterating in the same tab.
 
 - `references/quillbot.md` — QuillBot AI Humanizer (125-word free limit, full automation).
 - `references/grammarly.md` — Grammarly Humanizer (cannot be automated; manual path).
-- `references/generic-tool.md` — discovering and driving any other humanizer site.
+- `references/generic-tool.md` — discovering and driving any other humanizer site
+  (Grubby AI, HumanizeAI Pro/free, ZeroGPT, Undetectable.ai, etc.).
 - `scripts/chunk_text.py` — sentence-aware splitter that keeps chunks under the limit.
